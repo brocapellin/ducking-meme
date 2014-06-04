@@ -29,7 +29,7 @@ animatedTriangle = do
     where
         runWorld runtimeRef = addTimerCallback (1000 `div` 40) $ do
             runtime <- get runtimeRef
-            runtimeRef $= runtime*1.003 + 1.0 / 40
+            runtimeRef $= runtime*1.003 + 1.0 / 40 -- :)
             runWorld runtimeRef
 
 renderAtFPS fps = addTimerCallback (1000 `div` fps) $ do
